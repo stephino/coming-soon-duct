@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script type="text/javascript">
+            var options = {
+                "rows": {
+                    description: "Number of rows",
+                    select: "#page_wrap",
+                    attr: 'data-rows',
+                    type: 'int',
+                    values: [1, 20],
+                    default: 4,
+                },
+                "columns": {
+                    description: "Number of columns",
+                    select: "#page_wrap",
+                    attr: 'data-columns',
+                    type: 'int',
+                    values: [1, 20],
+                    default: 8,
+                },
+                "tabMargin": {
+                    description: "Margin between tabs",
+                    select: "#page_wrap",
+                    attr: 'data-margin',
+                    type: 'int',
+                    values: [0, 50],
+                    default: 0,
+                },
+                "radius": {
+                    description: "Gravitational radius",
+                    select: "#page_wrap",
+                    attr: 'data-radius',
+                    type: 'int',
+                    values: [100, 500],
+                    default: 300,
+                },
+                "shrink": {
+                    description: "Gravitational shrik percent",
+                    select: "#page_wrap",
+                    attr: 'data-shrink',
+                    type: 'int',
+                    values: [10, 90],
+                    default: 30,
+                },
+                "progress": {
+                    description: "Project progress",
+                    select: "#page_wrap",
+                    attr: 'data-progress',
+                    type: 'int',
+                    values: [0, 100],
+                    default: 32,
+                },
+                "progressBarSpeed": {
+                    description: "Progress bar speed",
+                    select: "#page_wrap",
+                    attr: 'data-progress-duration',
+                    type: 'int',
+                    values: [100, 10000],
+                    default: 3000,
+                },
+                "progressBarColor": {
+                    description: "Progress bar text color",
+                    select: "#page_wrap",
+                    attr: 'data-progress-color',
+                    type: 'color',
+                    default: '#ffffff',
+                },
+                "progressBarBkg": {
+                    description: "Progress bar background color",
+                    select: "#page_wrap",
+                    attr: 'data-progress-background',
+                    type: 'color',
+                    default: '#ffffff',
+                },
+                "countdownDate": {
+                    description: "Release date",
+                    select: ".countdown",
+                    attr: 'date',
+                    type: 'date',
+                    default: "2029-01-01",
+                },
+                "countdownColor1": {
+                    description: "Countdown color 1",
+                    select: ".countdown",
+                    attr: "color1",
+                    type: "color",
+                    default: "#fcffd9",
+                },
+                "countdownColor2": {
+                    description: "Countdown color 2",
+                    select: ".countdown",
+                    attr: "color2",
+                    type: "color",
+                    default: "#a41b22",
+                },
+            };
+        </script>
+        <script src="http://preview.stephino.com/js/frame.js"></script>
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+        <title>Duct</title>
+        <!--[if lt IE 9]><script src="js/html5.js"></script><![endif]-->
+        <link rel="icon" type="image/png" href="favicon.ico">
+        <link rel="stylesheet" href="css/jquery-ui-1.10.3.custom.min.css"/>
+        <link rel="stylesheet" href="css/bootstrap.css"/>
+        <link rel="stylesheet" href="css/bootstrap-responsive.css"/>
+        <link rel="stylesheet" href="css/bootstrap-modal.css"/>
+        <link rel="stylesheet" href="css/ie.css"/>
+        <link rel="stylesheet" href="css/jquery.jqplot.css"/>
+        <link rel="stylesheet" href="css/style.css"/>
+    </head>
+    <body class="red">
+        <div id="page_wrap">
+            <a href="javascript:void(0);" data-target="#newsletter" data-toggle="modal" class="logo">Duct</a>
+            <h1>We're launching soon...</h1>
+            <h2>Fasten your seatbelts, it's going to be a thrilling ride</h2>
+            <div class="countdown" date="2029-01-01"></div>
+        </div>
+        
+        <!--About us-->
+        <div class="modal hide fade" id="about-us" tabindex="1" role="dialog" aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h3>About us</h3>
+            </div>
+            <div class="modal-body">
+                <p>We are a creative agency based in Europe.<br/>
+                Lorem ipsum dolor sit amet is the way we start all of our sentences.</p>
+                <p class="center">
+                    <!--<a href="javascript:void(0);" class="social youtube">Youtube</a>-->
+                    <!--<a href="javascript:void(0);" class="social yandex">Yandex</a>-->
+                    <!--<a href="javascript:void(0);" class="social vkontakte">Vkontakte</a>-->
+                    <!--<a href="javascript:void(0);" class="social vk">Vk</a>-->
+                    <a href="javascript:void(0);" class="social vimeo">Vimeo</a>
+                    <a href="javascript:void(0);" class="social twitter">Twitter</a>
+                    <!--<a href="javascript:void(0);" class="social tumblr">Tumblr</a>-->
+                    <!--<a href="javascript:void(0);" class="social steam">Steam</a>-->
+                    <a href="javascript:void(0);" class="social stackoverflow">Stackoverflow</a>
+                    <!--<a href="javascript:void(0);" class="social soundcloud">Soundcloud</a>-->
+                    <a href="javascript:void(0);" class="social skype">Skype</a>
+                    <!--<a href="javascript:void(0);" class="social share">Share</a>-->
+                    <!--<a href="javascript:void(0);" class="social rss">Rss</a>-->
+                    <!--<a href="javascript:void(0);" class="social readability">Readability</a>-->
+                    <!--<a href="javascript:void(0);" class="social read-it-later">Read-it-Later</a>-->
+                    <!--<a href="javascript:void(0);" class="social pocket">Pocket</a>-->
+                    <!--<a href="javascript:void(0);" class="social pinterest">Pinterest</a>-->
+                    <!--<a href="javascript:void(0);" class="social picasa">Picasa</a>-->
+                    <!--<a href="javascript:void(0);" class="social openid">Openid</a>-->
+                    <!--<a href="javascript:void(0);" class="social myspace">Myspace</a>-->
+                    <!--<a href="javascript:void(0);" class="social moikrug">Moikrug</a>-->
+                    <a href="javascript:void(0);" class="social linked-in">Linked-in</a>
+                    <!--<a href="javascript:void(0);" class="social lifejournal">Lifejournal</a>-->
+                    <!--<a href="javascript:void(0);" class="social lastfm">Lastfm</a>-->
+                    <!--<a href="javascript:void(0);" class="social jabber">Jabber</a>-->
+                    <!--<a href="javascript:void(0);" class="social instapaper">Instapaper</a>-->
+                    <!--<a href="javascript:void(0);" class="social habrahabr">Habrahabr</a>-->
+                    <!--<a href="javascript:void(0);" class="social google">Google</a>-->
+                    <!--<a href="javascript:void(0);" class="social github-octoface">Github-octoface</a>-->
+                    <!--<a href="javascript:void(0);" class="social github-circle">Github-circle</a>-->
+                    <!--<a href="javascript:void(0);" class="social foursquare">Foursquare</a>-->
+                    <a href="javascript:void(0);" class="social flickr">Flickr</a>
+                    <!--<a href="javascript:void(0);" class="social flattr">Flattr</a>-->
+                    <a href="javascript:void(0);" class="social facebook">Facebook</a>
+                    <!--<a href="javascript:void(0);" class="social evernote">Evernote</a>-->
+                    <!--<a href="javascript:void(0);" class="social email">Email</a>-->
+                    <a href="javascript:void(0);" class="social dropbox">Dropbox</a>
+                    <!--<a href="javascript:void(0);" class="social blogspot">Blogspot</a>-->
+                    <!--<a href="javascript:void(0);" class="social bitbucket">Bitbucket</a>-->
+                    <!--<a href="javascript:void(0);" class="social youtube-play">Youtube-play</a>-->
+                </p>
+            </div>
+        </div>
+        
+        <!--Contact form-->
+        <div class="modal hide fade" id="contact" tabindex="0" role="dialog" aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h3>Contact us</h3>
+            </div>
+            <div class="modal-body">
+                <p>Don't hesitate to contact us.</p>
+                <form method="post" action="contact.php" class="validate text-center">
+                    <input class="input-block-level" name="name" type="text" placeholder="Name" required /><br/>
+                    <input class="input-block-level" name="email" type="email" placeholder="E-mail" required /><br/>
+                    <textarea class="input-block-level" name="content" placeholder="Your message" required ></textarea>
+                    <span class="btn  btn-large btn-block submit"><i class="icon-ok"></i> Send</span>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Newsletter -->
+        <div class="modal hide fade" id="newsletter" tabindex="0" role="dialog" aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h3>Newsletter</h3>
+            </div>
+            <div class="modal-body">
+                <p>If you'd like to hear more from us, please send us your e-mail address.</p>
+                <form method="post" action="newsletter.php" class="validate text-center">
+                    <input class="input-block-level" name="email" type="email" placeholder="E-mail" required /><br/>
+                    <span class="btn  btn-large btn-block submit"><i class="icon-envelope"></i> Submit</span>
+                </form>
+            </div>
+        </div>
+        
+        <!--About us-->
+        <div class="modal hide fade" id="map" tabindex="1" role="dialog" aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h3>Map</h3>
+            </div>
+            <div class="modal-body">
+                <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=New+York,+NY,+United+States&amp;aq=0&amp;oq=new+ypr&amp;sll=41.983994,-69.873047&amp;sspn=9.45351,19.753418&amp;t=m&amp;ie=UTF8&amp;hq=&amp;hnear=New+York&amp;ll=40.714353,-74.005973&amp;spn=0.150681,0.308647&amp;z=12&amp;output=embed"></iframe>
+            </div>
+        </div>
+        
+        <!--Javascript-->
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery-ui-1.10.3.custom.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap-modal.js"></script>
+        <script type="text/javascript" src="js/bootstrap-modalmanager.js"></script>
+        <script type="text/javascript" src="js/jquery.jqplot.min.js"></script>
+        <script type="text/javascript" src="js/jqplot.donutRenderer.min.js"></script>
+        <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+        <script type="text/javascript" src="js/additional-methods.min.js"></script>
+        <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+        <script type="text/javascript" src="js/jquery.mCustomScrollbar.js"></script>
+        <script type="text/javascript" src="js/functions.js"></script>
+    </body>
+</html>
